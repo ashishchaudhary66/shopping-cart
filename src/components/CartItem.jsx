@@ -7,11 +7,11 @@ const CartItem = ({item}) => {
     dispatch(remove(item.id))
   }
   return (
-    <div className="flex w-full gap-5 items-center mb-5 mt-5">
-      <div className="w-[400px]">
+    <div className="flex flex-col md:flex-row w-full gap-5 items-center mb-5 mt-5">
+      <div className="w-[400px] flex justify-center">
         <img src={item.image} className="object-fill h-[200px]" alt="addedProduct"/>
       </div>
-      <div className="max-w-[400px]">
+      <div className="max-w-[250px] md:max-w-[400px] mr-4">
         <p className="font-bold mb-2">{item.title}</p>
         <p className="mb-4">{item.description}</p>
         <div className="flex justify-between items-center">
