@@ -12,14 +12,14 @@ const Cart = () => {
     setTotalAmount(cart.reduce((acc,cur)=>acc+cur.price,0))
   },[cart])
   return (
-    <div className="flex max-w-[900px] mx-auto gap-10 mt-12">
+    <div className="flex flex-col-reverse items-center md:items-start md:flex-row max-w-[900px] mx-auto gap-10 mt-12">
       {
         cart.length>0?(<>
               <div className="w-full">
             {
-              cart.map((item)=>(
+              cart.map((item,index)=>(
                 <div>
-                  <CartItem key={item.id} item={item}/>
+                  <CartItem key={item.id} item={item} index={index}/>
                   <div className="w-full h-[2px] bg-slate-600"></div>
                 </div>
                 
